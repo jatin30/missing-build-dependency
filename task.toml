@@ -1,0 +1,22 @@
+[task]
+name = "missing-make-dependency"
+description = "Fix build failure caused by missing make build tool"
+category = "build-fix"
+difficulty = "easy"
+timeout = 300
+
+[environment]
+type = "docker"
+dockerfile = "environment/Dockerfile"
+
+[environment.runtime]
+python = "3.12"
+
+[evaluation]
+type = "script"
+script = "solution/solve.sh"
+
+[metadata]
+tags = ["build-dependencies", "make", "compilation", "system-tools"]
+author = "Terminal-Bench Task"
+version = "1.0.0"
